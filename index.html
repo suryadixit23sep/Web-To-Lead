@@ -6,13 +6,16 @@
     <title>Web To Lead Form</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script><!-- add this line for recaptch as got it from generate lead form after enable recaptcha setting-->
 </head>
 <body>
    <h1> Create Web To Lead</h1>
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5g000005W8Ls" method="POST">
+    <input type=hidden name='captcha_settings' value='{"keyname":"Web_To_Lead","fallback":"true","orgId":"00D5g000005W8Ls","ts":""}'> <!-- add this line for recaptch as got it from generate lead form after enable recaptcha setting-->
     
     <input type=hidden name="oid" value="00D5g000005W8Ls">
     <input type=hidden name="retURL" value="https://suryadixit23sep.github.io/Web-To-Lead/thanks.html">
+    
     
     <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required="true" /><br>
     
@@ -25,8 +28,15 @@
     <label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
     
     <label for="state">State/Province</label><input  id="state" maxlength="20" name="state" size="20" type="text" /><br>
+
     
+    
+
     <input type="submit" name="submit" class="submit">
+
+    <div class="g-recaptcha" data-sitekey="6LfDGhQrAAAAAPipfQquetDG_UVn0BlpjLKsgKR-"></div><br> <!-- add this line for recaptch as got it from generate lead form after enable recaptcha setting-->
+
+    
     
     </form>
     
